@@ -65,6 +65,7 @@
 }
 .menu__item:hover:after, .menu__item_active:after {
   opacity: 1;
+  width: 100%;
 }
 
 .menu__item:last-child {

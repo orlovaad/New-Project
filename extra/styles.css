@@ -28,9 +28,15 @@
   transition: opacity .5s;
 }
 
+/*
 .menu__item:hover {
   opacity: 0.5;
 }
+*/
+.text:hover {
+  opacity: 0.5;
+}
+
 
 .menu__item::after {
   position:absolute;

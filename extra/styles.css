@@ -27,7 +27,7 @@
   text-decoration: none;
 }
 
-.menu__item_text:hover {
+.menu__item-text:hover {
   opacity: 0.5;
 }
 
@@ -53,13 +53,14 @@
 }
 
 .logo {
+  display: flex;
   padding: 40px 0;
   font: bold 24px/31px pt_serif, arial, helvetica, sans-serif;
 }
 
 .logo__img {
   position: relative;
-  width: 100px;
+  width: 40px;
 }
 
 .logo__circle {

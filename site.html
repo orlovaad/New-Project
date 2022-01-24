@@ -4,11 +4,13 @@
 <!--It's comment-->
 <head>
   <meta charset="utf-8"/>
+  <meta name="viewport"  content="width=device-width, initial-scale=1">
   <title>app.creation</title>
   <link rel="stylesheet" href="extra/styles.css">
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto">
   <link rel="stylesheet" href="extra/fonts/fonts.css">
 </head>
+
 
 <body>
   <div class="wrapper">
@@ -18,8 +20,15 @@
         <div class="logo__circle logo__circle_color-dark"></div>
         <div class="logo__circle logo__circle_color-light"></div>
       </div>
-      app.creation
+      <span class="logo__text">app.creation</span>
     </div>
+
+    <div class="hamburger-menu">
+        <input id="menu__toggle" type="checkbox" />
+        <label class="menu__btn" for="menu__toggle">
+          <span></span>
+        </label>
+
     <nav class="menu">
       <a class="menu__item" href="#"><span class="menu__item-text">start</span></a>
       <a class="menu__item" href="#"><span class="menu__item-text">services</span></a>
@@ -27,6 +36,9 @@
       <a class="menu__item" href="#"><span class="menu__item-text">blog</span></a>
       <a class="menu__item" href="#"><span class="menu__item-text">contact us</span></a>
     </nav>
+
+  </div>
+
   </header>
 
   <section class="main">

@@ -4,7 +4,11 @@
 
 .wrapper {
   width: 80%;
-  margin:auto;
+  margin: auto;
+}
+
+#menu__toggle {
+  opacity: 0;
 }
 
 /* Menu */
@@ -12,6 +16,8 @@
 .menu {
   display: flex;
   align-items: center;
+  padding: 30px;
+  font: 500 14px/16px Roboto, arial, helvetica, sans-serif;
 }
 
 .header {
@@ -48,9 +54,6 @@
   width: 100%;
 }
 
-.menu__item:last-child {
-  margin-right: 0;
-}
 
 
 /* Logo */
@@ -87,13 +90,16 @@
 /* Main content  */
 
 .main {
-  padding: 0 63% 100px 0;
+  padding: 0 50% 300px 0;
   background: top right no-repeat url(main.svg);
+  background-size: 50%;
 }
 
 .main__title {
   margin-bottom: 40px;
   font: bold 50px/65px pt_serif, arial, helvetica, sans-serif;
+  width: 430px;
+
 }
 
 .main__title-text_highlight {
@@ -103,14 +109,17 @@
 .main__subtitle {
   margin-bottom: 41px;
   font: 18px/21px Roboto, arial, helvetica, sans-serif;
+  width: 365px;
 }
 
 .main__button {
   display: inline-block;
+  text-align: center;
   font: 14px/16px Roboto, arial, helvetica, sans-serif;
   color: #fff;
   background: #0056EC;
-  padding: 14px 16px;
+  width: 209px;
+  padding: 14px 25px;
   text-decoration: none;
   border-radius: 4px;
   transition: opacity .5s;
@@ -133,8 +142,9 @@
  .main {
    text-align: center;
    padding: 74% 0 0;
-   background-size: 74%;
+   background-size: 90%;
    background-position: top center;
+
  }
 
  .main__title {
@@ -143,8 +153,11 @@
  }
 
  .main__subtitle {
-   margin-bottom: 25px;
+   margin: 25px;
    font: 500 16px/19px Roboto, arial, helvetica, sans-serif;
+   color: #000;
+
+   text-align: center;
  }
 
  .main__button {
@@ -164,8 +177,8 @@
   display: flex;
   align-items: center;
   position: fixed;
-  top: 20px;
-  left: 20px;
+  top: 30px;
+  right: 30px;
   width: 26px;
   height: 26px;
   cursor: pointer;
@@ -177,9 +190,11 @@
   display: block;
   position: absolute;
   width: 100%;
-  height: 2px;
-  background-color: #616161;
+  height: 3px;
+  background-color: #0056EC;
   transition-duration: .25s;
+
+
 }
 
 .menu__btn > span::before {
@@ -224,20 +239,20 @@
   padding: 80px 0;
 
   list-style: none;
-  background-color: #ECEFF1;
+  background-color: #fff;
   transition-duration: .25s;
 }
 
 .menu__item {
   display: block;
   text-align: center;
-  padding: 30px;
+  padding: 20px;
 
   color: #333;
 
   font-family: 'Roboto', sans-serif;
-  font-size: 20px;
-  font-weight: 600;
+  font-size: 25px;
+  font-weight: 500;
 
   text-decoration: none;
   transition-duration: .25s;
@@ -252,4 +267,47 @@
   width: 0;
 }
 
+}
+
+@media (max-width: 1024px) {
+  .wrapper {
+    margin-left: 40px;
+  }
+
+  .menu {
+    position: fixed;
+    right: 20px;
+  }
+}
+
+@media (min-width: 1500px) {
+  .wrapper {
+    margin-left: 195px;
+  }
+
+  .menu {
+    position: fixed;
+    right: 200px;
+    font: 500 18px/21px pt_serif, arial, helvetica, sans-serif;
+  }
+
+  .main__title {
+    margin-bottom: 44px;
+    font: bold 66px/87px pt_serif, arial, helvetica, sans-serif;
+    width: 560px;
+  }
+
+  .main__subtitle {
+    font: 500 22px/26px Roboto, arial, helvetica, sans-serif;
+    width: 455px;
+  }
+
+  .main__button {
+    font: 500 18px/21px Roboto, arial, helvetica, sans-serif;
+    width: 270px;
+  }
+
+ .logo__text {
+   font-size: 24px;
+   }
 }

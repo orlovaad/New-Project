@@ -60,7 +60,7 @@
 
 .logo {
   display: flex;
-  padding: 40px 0;
+  padding: 28px 0;
   font: bold 24px/31px pt_serif, arial, helvetica, sans-serif;
 }
 
@@ -96,9 +96,9 @@
 }
 
 .main__title {
-  margin-bottom: 40px;
+  margin-bottom: 25px;
   font: bold 50px/65px pt_serif, arial, helvetica, sans-serif;
-  width: 430px;
+  width: 90%;
 
 }
 
@@ -107,9 +107,9 @@
 }
 
 .main__subtitle {
-  margin-bottom: 41px;
+  margin-bottom: 25px;
   font: 18px/21px Roboto, arial, helvetica, sans-serif;
-  width: 365px;
+  width: 90%;
 }
 
 .main__button {
@@ -141,26 +141,27 @@
 
  .main {
    text-align: center;
+   width: 100%;
    padding: 74% 0 0;
    background-size: 90%;
    background-position: top center;
-
  }
 
  .main__title {
-   margin-bottom: 44px;
+   text-align: center;
+   margin-bottom: 30px;
    font: bold 30px/39px pt_serif, arial, helvetica, sans-serif;
  }
 
  .main__subtitle {
-   margin: 25px;
+   text-align: center;
    font: 500 16px/19px Roboto, arial, helvetica, sans-serif;
-   color: #000;
-
    text-align: center;
  }
 
  .main__button {
+   align-items: center;
+   width: 209px;
    font: 500 14px/16px Roboto, arial, helvetica, sans-serif;
  }
 
@@ -169,17 +170,13 @@
   }
 
 /* Mobile hamburger */
-#menu__toggle {
-  opacity: 0;
-}
-
 .menu__btn {
   display: flex;
   align-items: center;
   position: fixed;
-  top: 30px;
-  right: 30px;
-  width: 26px;
+  top: 32px;
+  right: 15%;
+  width: 25px;
   height: 26px;
   cursor: pointer;
   z-index: 1;
@@ -269,25 +266,38 @@
 
 }
 
-@media (max-width: 1024px) {
+@media (min-width: 768px) {
   .wrapper {
-    margin-left: 40px;
+    margin: 0 60px;
+  }
+
+  .main__subtitle {
+    width: 100%;
+  }
+
+  .main__title {
+    width: 100%;
+  }
+
+  .main__button {
+    width: 209px;
   }
 
   .menu {
     position: fixed;
-    right: 20px;
+    right: 30px;
+    top: 10px;
   }
 }
 
-@media (min-width: 1500px) {
+@media (min-width: 1350px) {
   .wrapper {
     margin-left: 195px;
   }
 
   .menu {
     position: fixed;
-    right: 200px;
+    right: 100px;
     font: 500 18px/21px pt_serif, arial, helvetica, sans-serif;
   }
 

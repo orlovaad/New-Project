@@ -150,19 +150,12 @@
  .main__title {
    text-align: center;
    margin-bottom: 30px;
-   font: bold 30px/39px pt_serif, arial, helvetica, sans-serif;
+   font-size: 30px/39px;
  }
 
  .main__subtitle {
    text-align: center;
-   font: 500 16px/19px Roboto, arial, helvetica, sans-serif;
-   text-align: center;
- }
-
- .main__button {
-   align-items: center;
-   width: 209px;
-   font: 500 14px/16px Roboto, arial, helvetica, sans-serif;
+   font-size: 16px/19px;
  }
 
 .logo__text {
@@ -266,7 +259,7 @@
 
 }
 
-@media (min-width: 768px) {
+@media (min-width: 769px) {
   .wrapper {
     margin: 0 60px;
   }
@@ -279,9 +272,6 @@
     width: 100%;
   }
 
-  .main__button {
-    width: 209px;
-  }
 
   .menu {
     position: fixed;
@@ -296,7 +286,6 @@
   }
 
   .menu {
-    position: fixed;
     right: 100px;
     font: 500 18px/21px pt_serif, arial, helvetica, sans-serif;
   }
@@ -321,3 +310,25 @@
    font-size: 24px;
    }
 }
+
+
+/* Animation
+
+.snowflake {
+  width: 5px;
+  height: 5px;
+  background: blue;
+  border-radius: 50%;
+  position: absolute;
+  animation: snowfall 8s linear infinite;
+}
+
+@keyframes snowfall {
+  0% {
+    transform: translate3d(0, 0, 0);
+  }
+  100% {
+    transform: translate3d(0, 110vh, 0);
+  }
+}
+*/

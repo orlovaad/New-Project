@@ -3,34 +3,34 @@
 }
 
 .wrapper {
-  width: 80%;
-  margin: auto;
+  margin: 0 3.9%;
 }
 
 #menu__toggle {
   opacity: 0;
 }
 
+.snowflake{
+  display: none;
+}
+
 /* Menu */
+.header {
+  display:flex;
+  justify-content: space-between;
+  margin-bottom: 93px;
+}
 
 .menu {
   display: flex;
   align-items: center;
-  padding: 30px;
+  padding: 22px 0;
   font: 500 14px/16px Roboto, arial, helvetica, sans-serif;
 }
 
-.header {
-  display:flex;
-  justify-content: space-between;
-  margin-bottom: 100px;
-}
-
-
 .menu__item {
   position: relative;
-  margin-right: 26px;
-  font: 500 18px/21px Roboto, arial, helvetica, sans-serif;
+  margin-left: 26px;
   color: #000000;
   text-decoration: none;
 }
@@ -54,14 +54,12 @@
   width: 100%;
 }
 
-
-
 /* Logo */
-
 .logo {
   display: flex;
-  padding: 28px 0;
-  font: bold 24px/31px pt_serif, arial, helvetica, sans-serif;
+  padding: 31px 0;
+  font: 700 24px/32px pt_serifregular, arial, helvetica, sans-serif;
+  letter-spacing: 1px;
 }
 
 .logo__img {
@@ -88,28 +86,28 @@
 }
 
 /* Main content  */
-
 .main {
+  margin: auto;
   padding: 0 50% 300px 0;
   background: top right no-repeat url(main.svg);
-  background-size: 50%;
+  background-size: 54%;
 }
 
 .main__title {
-  margin-bottom: 25px;
-  font: bold 50px/65px pt_serif, arial, helvetica, sans-serif;
-  width: 90%;
-
+  padding-top: 20px;
+  margin-bottom: 33px;
+  font: bold 50px/66px pt_serifregular, arial, helvetica, sans-serif;
+  letter-spacing: 1.7px;
 }
 
 .main__title-text_highlight {
-  background: #ECF3FF;
+  background: #ecf3ff;
+  background-size: 20px 0px;
 }
 
 .main__subtitle {
-  margin-bottom: 25px;
-  font: 18px/21px Roboto, arial, helvetica, sans-serif;
-  width: 90%;
+  margin: auto 80px 42px auto;
+  font: 500 18px/21px Roboto, arial, helvetica, sans-serif;
 }
 
 .main__button {
@@ -118,8 +116,9 @@
   font: 14px/16px Roboto, arial, helvetica, sans-serif;
   color: #fff;
   background: #0056EC;
-  width: 209px;
-  padding: 14px 25px;
+  width: 169px;
+  height: 17px;
+  padding: 14px 20px;
   text-decoration: none;
   border-radius: 4px;
   transition: opacity .5s;
@@ -130,47 +129,61 @@
 }
 
 /* Mobile version */
-@media (max-width: 768px) {
+@media (max-width: 900px) {
+
+  .logo__text {
+    display: none;
+    }
+
+  .logo {
+    padding-top: 17px;
+  }
+
   .menu {
     display: none;
   }
 
   .header {
-    margin-bottom: 28px;
+    margin: 0;
   }
 
  .main {
    text-align: center;
    width: 100%;
-   padding: 74% 0 0;
-   background-size: 90%;
-   background-position: top center;
+   padding: 78% 0 0;
+   background-size: 84%;
+   background-position: top 30px center;
  }
 
  .main__title {
    text-align: center;
-   margin-bottom: 30px;
-   font-size: 30px/39px;
+   margin: 28px 0 43px auto;
+   font-size: 30px;
+   line-height: 40px;
+   letter-spacing: 0.4px;
  }
 
  .main__subtitle {
+   height: 12%;
+   width: 73%;
    text-align: center;
-   font-size: 16px/19px;
+   font-size: 16px;
+   line-height: 19px;
+   margin: 0 0 25px 10%;
+   padding: 0 15px;
+   letter-spacing: .1px;
  }
 
-.logo__text {
-  display: none;
-  }
 
 /* Mobile hamburger */
 .menu__btn {
   display: flex;
   align-items: center;
   position: fixed;
-  top: 32px;
-  right: 15%;
+  top: 28px;
+  right: 7%;
   width: 25px;
-  height: 26px;
+  height: 17px;
   cursor: pointer;
   z-index: 1;
 }
@@ -183,18 +196,16 @@
   height: 3px;
   background-color: #0056EC;
   transition-duration: .25s;
-
-
 }
 
 .menu__btn > span::before {
   content: '';
-  top: -8px;
+  top: -7px;
 }
 
 .menu__btn > span::after {
   content: '';
-  top: 8px;
+  top: 7px;
 }
 
 /* Отрисовка крестика вместо бургера */
@@ -210,7 +221,6 @@
   transform: rotate(90deg);
 }
 #menu__toggle:checked ~ .menu {
-
   left: 0;
 }
 
@@ -221,13 +231,10 @@
   position: fixed;
   top: 0;
   left: -100%;
-
   width: 100%;
   height: 100%;
-
   margin: 0;
   padding: 80px 0;
-
   list-style: none;
   background-color: #fff;
   transition-duration: .25s;
@@ -237,13 +244,10 @@
   display: block;
   text-align: center;
   padding: 20px;
-
   color: #333;
-
   font-family: 'Roboto', sans-serif;
   font-size: 25px;
   font-weight: 500;
-
   text-decoration: none;
   transition-duration: .25s;
 }
@@ -256,58 +260,87 @@
 .menu__item:hover:after {
   width: 0;
 }
-
 }
 
-@media (min-width: 769px) {
+
+@media (min-width: 1150px) and (max-width: 1600px) {
   .wrapper {
-    margin: 0 60px;
-  }
-
-  .main__subtitle {
-    width: 100%;
-  }
-
-  .main__title {
-    width: 100%;
-  }
-
-
-  .menu {
-    position: fixed;
-    right: 30px;
-    top: 10px;
-  }
-}
-
-@media (min-width: 1350px) {
-  .wrapper {
-    margin-left: 195px;
+    margin: 0 15.5% 0 15.5%;
   }
 
   .menu {
-    right: 100px;
-    font: 500 18px/21px pt_serif, arial, helvetica, sans-serif;
+    font: 500 14px/16px pt_serifregular, arial, helvetica, sans-serif;
+    padding-right: 10px;
   }
 
   .main__title {
-    margin-bottom: 44px;
-    font: bold 66px/87px pt_serif, arial, helvetica, sans-serif;
+    margin-bottom: 34px;
+    font: bold 50px/66px;
     width: 560px;
   }
 
   .main__subtitle {
-    font: 500 22px/26px Roboto, arial, helvetica, sans-serif;
-    width: 455px;
-  }
-
-  .main__button {
-    font: 500 18px/21px Roboto, arial, helvetica, sans-serif;
-    width: 270px;
+    width: 380px;
+    margin-left: 0;
+    letter-spacing: .1px;
   }
 
  .logo__text {
    font-size: 24px;
+   line-height: 32px;
+   letter-spacing: 1.4px;
+   }
+}
+
+@media (min-width: 1600px) {
+  .wrapper {
+    margin: 0 9.8% 0 9.8%;
+  }
+
+  .header {
+    margin-bottom: 135px;
+  }
+
+  .main {
+    padding-top: 8px;
+    background-size: 50%;
+  }
+
+  .menu {
+    padding-top: 18px;
+    font-size: 18px;
+    line-height: 21px;
+    padding-right: 9px;
+  }
+
+  .main__title {
+    letter-spacing: 2.5px;
+    margin-bottom: 33px;
+    font-size: 66px;
+    line-height: 87px;
+    width: 560px;
+  }
+
+  .main__subtitle {
+    font-size: 22px;
+    line-height: 26px;
+    width: 450px;
+    margin-left: 0;
+  }
+
+
+ .logo__text {
+   font-size: 24px;
+   line-height: 32px;
+   letter-spacing: 1.3px;
+  }
+  
+  .main__button {
+     font-size: 18px;
+     line-height: 21px;
+     width: 250px;
+     height: 29px;
+     padding: 14px 10px;
    }
 }
 
@@ -315,12 +348,7 @@
 /* Animation
 
 .snowflake {
-  width: 5px;
-  height: 5px;
-  background: blue;
-  border-radius: 50%;
-  position: absolute;
-  animation: snowfall 8s linear infinite;
+  animation: snowfall 5s linear infinite;
 }
 
 @keyframes snowfall {
